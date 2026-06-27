@@ -225,9 +225,9 @@ function Index() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <SocialChip icon={<Github className="h-4 w-4" />} label="GitHub" href="https://github.com/nitansh" />
-              <SocialChip icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" href="https://linkedin.com/in/nitansh-singh" />
-              <SocialChip icon={<Twitter className="h-4 w-4" />} label="Twitter" href="https://x.com/nitansh" />
+              <SocialChip icon={<Github className="h-4 w-4" />} label="GitHub" href="https://github.com/nitanshsingh" />
+              <SocialChip icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" href="https://linkedin.com/in/nitansh-singh-chauhan" />
+              <SocialChip icon={<Twitter className="h-4 w-4" />} label="Twitter" href="https://x.com/nitanshsingh" />
               <SocialChip icon={<Heart className="h-4 w-4" />} label="Sponsor" href="https://github.com/sponsors/nitansh" />
             </div>
           </div>
@@ -381,10 +381,10 @@ function Index() {
             Always open for collaborations, new ideas, or just a friendly chat.
           </p>
           <div className="mt-6 grid gap-2 sm:grid-cols-2">
-            <ContactRow icon={<Mail className="h-4 w-4" />} label="me@nitansh.dev" href="mailto:me@nitansh.dev" />
-            <ContactRow icon={<Github className="h-4 w-4" />} label="github.com/nitansh" href="https://github.com/nitansh" />
-            <ContactRow icon={<Linkedin className="h-4 w-4" />} label="linkedin.com/in/nitansh-singh" href="https://linkedin.com/in/nitansh-singh" />
-            <ContactRow icon={<Twitter className="h-4 w-4" />} label="twitter.com/nitansh" href="https://x.com/nitansh" />
+            <ContactRow icon={<Mail className="h-4 w-4" />} label="me@nitansh.dev" href="nitanshsinghchauhan@gmail.com" />
+            <ContactRow icon={<Github className="h-4 w-4" />} label="github.com/nitansh" href="https://github.com/nitanshsingh" />
+            <ContactRow icon={<Linkedin className="h-4 w-4" />} label="linkedin.com/in/nitansh-singh" href="https://linkedin.com/in/nitansh-singh-chauhan" />
+            <ContactRow icon={<Twitter className="h-4 w-4" />} label="twitter.com/nitansh" href="https://x.com/nitanshsingh" />
           </div>
         </section>
 
