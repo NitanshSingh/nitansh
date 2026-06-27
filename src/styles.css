@@ -31,82 +31,298 @@
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-online: var(--online);
-  --font-display: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-grass: var(--grass);
+  --color-dirt: var(--dirt);
+  --color-stone: var(--stone);
+  --color-sky: var(--sky);
+  --color-gold: var(--gold);
+  --font-display: "Press Start 2P", ui-monospace, monospace;
+  --font-pixel: "VT323", ui-monospace, monospace;
+  --font-mono: "VT323", ui-monospace, monospace;
 }
 
 :root {
-  --radius: 0.75rem;
-  /* Dark theme (default — matches xevrion.dev) */
-  --background: oklch(0.16 0.012 260);
-  --foreground: oklch(0.95 0.005 260);
-  --surface: oklch(0.19 0.014 260);
-  --surface-2: oklch(0.225 0.015 260);
-  --card: oklch(0.19 0.014 260);
-  --card-foreground: oklch(0.95 0.005 260);
-  --popover: oklch(0.19 0.014 260);
-  --popover-foreground: oklch(0.95 0.005 260);
-  --primary: oklch(0.7 0.18 265);
-  --primary-foreground: oklch(0.16 0.012 260);
-  --secondary: oklch(0.25 0.014 260);
-  --secondary-foreground: oklch(0.95 0.005 260);
-  --muted: oklch(0.23 0.013 260);
-  --muted-foreground: oklch(0.66 0.012 260);
-  --accent: oklch(0.28 0.02 265);
-  --accent-foreground: oklch(0.95 0.005 260);
-  --destructive: oklch(0.62 0.22 25);
+  --radius: 0.25rem;
+  /* Minecraft-inspired dark theme */
+  --background: oklch(0.18 0.025 240);              /* deep dusk */
+  --foreground: oklch(0.96 0.01 100);
+  --surface: oklch(0.24 0.04 50);                   /* dirt */
+  --surface-2: oklch(0.30 0.05 50);                 /* lighter dirt */
+  --card: oklch(0.22 0.035 50);
+  --card-foreground: oklch(0.96 0.01 100);
+  --popover: oklch(0.22 0.035 50);
+  --popover-foreground: oklch(0.96 0.01 100);
+  --primary: oklch(0.72 0.21 142);                  /* grass green */
+  --primary-foreground: oklch(0.12 0.02 142);
+  --secondary: oklch(0.35 0.05 50);
+  --secondary-foreground: oklch(0.96 0.01 100);
+  --muted: oklch(0.28 0.03 50);
+  --muted-foreground: oklch(0.74 0.02 90);
+  --accent: oklch(0.7 0.15 220);                    /* sky blue */
+  --accent-foreground: oklch(0.12 0.02 220);
+  --destructive: oklch(0.6 0.24 28);                /* redstone */
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.28 0.014 260);
-  --input: oklch(0.28 0.014 260);
-  --ring: oklch(0.7 0.18 265);
-  --online: oklch(0.78 0.18 145);
+  --border: oklch(0.42 0.04 50);                    /* stone outline */
+  --input: oklch(0.32 0.03 50);
+  --ring: oklch(0.72 0.21 142);
+  --online: oklch(0.82 0.2 142);
+  --grass: oklch(0.72 0.21 142);
+  --dirt: oklch(0.42 0.08 50);
+  --stone: oklch(0.55 0.01 240);
+  --sky: oklch(0.7 0.15 220);
+  --gold: oklch(0.82 0.17 85);
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+    image-rendering: pixelated;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: var(--font-display);
-    font-feature-settings: "ss01", "cv11";
+    font-family: "VT323", ui-monospace, monospace;
+    font-size: 1.15rem;
+    line-height: 1.45;
+    /* Subtle blocky grid texture */
     background-image:
-      repeating-linear-gradient(0deg, transparent 0 39px, color-mix(in oklab, var(--foreground) 3%, transparent) 39px 40px),
-      repeating-linear-gradient(90deg, transparent 0 39px, color-mix(in oklab, var(--foreground) 3%, transparent) 39px 40px);
+      repeating-linear-gradient(0deg,
+        transparent 0 31px,
+        color-mix(in oklab, var(--foreground) 4%, transparent) 31px 32px),
+      repeating-linear-gradient(90deg,
+        transparent 0 31px,
+        color-mix(in oklab, var(--foreground) 4%, transparent) 31px 32px);
   }
-  ::selection { background: color-mix(in oklab, var(--primary) 40%, transparent); }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 55%, transparent);
+    color: var(--primary-foreground);
+  }
+  /* Pixel scrollbar */
+  ::-webkit-scrollbar { width: 12px; height: 12px; }
+  ::-webkit-scrollbar-track { background: var(--surface); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--grass);
+    border: 2px solid var(--background);
+  }
 }
 
-@utility dotted-divider {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    color-mix(in oklab, var(--foreground) 10%, transparent) 0 6px,
-    transparent 6px 12px
-  );
-  height: 8px;
+/* === Minecraft visual primitives === */
+
+@utility pixel-border {
+  /* Crisp 2px outline + bottom inner shadow (block depth) */
+  border: 2px solid #1a1208;
+  box-shadow:
+    inset 0 -4px 0 0 color-mix(in oklab, #000 35%, transparent),
+    inset 0 4px 0 0 color-mix(in oklab, #fff 12%, transparent),
+    0 4px 0 0 #1a1208;
+  border-radius: 0;
+}
+
+@utility block-card {
+  background:
+    linear-gradient(180deg,
+      color-mix(in oklab, var(--surface-2) 100%, transparent) 0%,
+      var(--surface) 100%);
+  border: 2px solid #1a1208;
+  box-shadow:
+    inset 0 -4px 0 0 color-mix(in oklab, #000 30%, transparent),
+    inset 0 3px 0 0 color-mix(in oklab, #fff 10%, transparent),
+    0 4px 0 0 #1a1208;
+  border-radius: 0;
+}
+
+@utility grass-block {
+  background:
+    linear-gradient(180deg,
+      var(--grass) 0 22%,
+      color-mix(in oklab, var(--grass) 60%, var(--dirt)) 22% 32%,
+      var(--dirt) 32% 100%);
+  border: 2px solid #1a1208;
+  box-shadow:
+    inset 0 -4px 0 0 #0008,
+    0 4px 0 0 #1a1208;
+  border-radius: 0;
+}
+
+@utility pixel-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  color: var(--foreground);
+  background: var(--surface-2);
+  border: 2px solid #1a1208;
+  box-shadow:
+    inset 0 -4px 0 0 #0006,
+    inset 0 3px 0 0 #ffffff14,
+    0 4px 0 0 #1a1208;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+@utility pixel-btn-primary {
+  background: var(--grass);
+  color: var(--primary-foreground);
+}
+
+.pixel-btn:hover { transform: translateY(-1px); }
+.pixel-btn:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 -2px 0 0 #0006,
+    inset 0 2px 0 0 #ffffff10,
+    0 1px 0 0 #1a1208;
 }
 
 @utility chip {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.78rem;
-  border-radius: 0.6rem;
-  border: 1px solid var(--color-border);
-  background: color-mix(in oklab, var(--surface) 80%, transparent);
-  color: var(--color-foreground);
+  padding: 0.3rem 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  border: 2px solid #1a1208;
+  background: var(--surface-2);
+  color: var(--foreground);
+  box-shadow:
+    inset 0 -3px 0 0 #0006,
+    inset 0 2px 0 0 #ffffff10;
+  border-radius: 0;
 }
 
 @utility section-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-muted-foreground);
+  color: var(--primary);
+  text-shadow: 2px 2px 0 #0007;
+}
+
+@utility dotted-divider {
+  background-image: repeating-linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--primary) 70%, transparent) 0 8px,
+    transparent 8px 16px
+  );
+  height: 4px;
+  border-radius: 0;
 }
 
 @utility glow-ring {
   box-shadow:
-    0 0 0 1px color-mix(in oklab, var(--primary) 35%, transparent),
-    0 10px 40px -10px color-mix(in oklab, var(--primary) 55%, transparent);
+    0 0 0 2px var(--grass),
+    0 0 24px -4px color-mix(in oklab, var(--grass) 70%, transparent);
+}
+
+@utility pixel-text-shadow {
+  text-shadow: 3px 3px 0 #000a;
+}
+
+@utility scanlines {
+  position: relative;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0 3px,
+    #00000022 3px 4px
+  );
+  mix-blend-mode: overlay;
+}
+
+/* === Scroll animations === */
+
+@keyframes float-block {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@utility animate-float-block {
+  animation: float-block 3s ease-in-out infinite;
+}
+
+@keyframes pixel-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--grass) 60%, transparent); }
+  50% { box-shadow: 0 0 0 8px color-mix(in oklab, var(--grass) 0%, transparent); }
+}
+@utility animate-pixel-pulse {
+  animation: pixel-pulse 2s ease-out infinite;
+}
+
+@keyframes torch-flicker {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  45% { opacity: 0.85; filter: brightness(1.15); }
+  55% { opacity: 0.95; filter: brightness(0.95); }
+}
+@utility animate-torch {
+  animation: torch-flicker 1.4s ease-in-out infinite;
+}
+
+/* === Scroll-driven reveal (Chromium / modern browsers) === */
+@supports (animation-timeline: view()) {
+  main > section,
+  main > footer {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes reveal-up {
+    from { opacity: 0; transform: translateY(60px) scale(0.985); filter: blur(2px); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);     filter: blur(0); }
+  }
+
+  /* Parallax banner: image drifts as the hero scrolls past */
+  .hero-banner-img {
+    animation: hero-parallax linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+  @keyframes hero-parallax {
+    from { transform: translateY(-8%) scale(1.08); }
+    to   { transform: translateY(8%)  scale(1.08); }
+  }
+
+  /* Cards stagger inside their sections */
+  main section article,
+  main section .chip {
+    animation: card-pop linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 25%;
+  }
+  @keyframes card-pop {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Animated grass strip under the banner */
+@keyframes grass-shift {
+  from { background-position: 0 0; }
+  to   { background-position: 32px 0; }
+}
+.grass-strip {
+  height: 14px;
+  background:
+    linear-gradient(180deg, var(--grass) 0 60%, color-mix(in oklab, var(--grass) 60%, var(--dirt)) 60% 100%),
+    repeating-linear-gradient(90deg,
+      color-mix(in oklab, #000 30%, transparent) 0 2px,
+      transparent 2px 4px);
+  background-blend-mode: overlay;
+  border-top: 2px solid #1a1208;
+  border-bottom: 2px solid #1a1208;
+  animation: grass-shift 4s linear infinite;
 }
