@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Yash Bavadiya — Full Stack Developer" },
-      { name: "description", content: "CS student at IIT Jodhpur. I build things for the web, tinker with systems, and occasionally touch grass." },
+      { name: "description", content: "CS student at SOON!. I build things for the web, tinker with systems, and occasionally touch grass." },
     ],
   }),
   component: Index,
@@ -145,7 +145,7 @@ function Index() {
             </div>
 
             <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-foreground/85">
-              CS student at <span className="rounded-md bg-primary/15 px-1.5 text-primary">IIT Jodhpur</span>.
+              CS student at <span className="rounded-md bg-primary/15 px-1.5 text-primary">SOON!</span>.
               I build things for the web, tinker with systems, and occasionally touch grass.
             </p>
 
