@@ -32,9 +32,7 @@ const NAV = [
 
 const TECH = [
   "C","C++","Python","JavaScript","TypeScript","HTML","CSS","React","Next.js",
-  "Tailwind","Node.js","Docker","TensorFlow","PyTorch","NumPy","Pandas","Git",
-  "Neovim","Arch Linux","Vercel",
-];
+  "Tailwind","Node.js","PyTorch","NumPy","Pandas","Git","Vercel"];
 
 const EXPERIENCE = [
   {
@@ -60,14 +58,14 @@ const PROJECTS = [
   { name: "Contributing to Kdenlive", desc: "Contributing to Kdenlive, an open-source video editor.", tags: ["C++","Qt","Open Source"], live: "https://kdenlive.org/", repo: "https://kdenlive.org/" },
   { name: "Cookmarked", desc: "A recipe manager that helps you save, organize, and discover recipes from around the web, all in one place.", tags: ["Next.js","TypeScript","Postgres"], live: "https://cookmarked.xevrion.dev/", repo: "https://github.com/xevrion/cookmarked" },
   { name: "Claude Lag Fixer", desc: "A Chrome extension that fixes the typing lag and slowness you get in long Claude.ai conversations.", tags: ["Chrome Extension","JavaScript"], repo: "https://github.com/xevrion/claude-lag-fixer" },
-  { name: "Peek-a-Repo", desc: "A Chrome extension that lets you peek into your GitHub repositories without clicking.", tags: ["Chrome Extension","JavaScript","GitHub API"], live: "https://chromewebstore.google.com/detail/aanpngikpldepannbdkglfohenbkhomp", repo: "https://github.com/xevrion/peek-a-repo" },
-  { name: "Stale Branches", desc: "Interactive CLI to list and delete stale git branches.", tags: ["Node.js","CLI","npm"], live: "https://xevrion.github.io/stale-branches/", repo: "https://npmjs.com/package/stale-branches" },
+ // { name: "Peek-a-Repo", desc: "A Chrome extension that lets you peek into your GitHub repositories without clicking.", tags: ["Chrome Extension","JavaScript","GitHub API"], live: "https://chromewebstore.google.com/detail/aanpngikpldepannbdkglfohenbkhomp", repo: "https://github.com/xevrion/peek-a-repo" },
+ // { name: "Stale Branches", desc: "Interactive CLI to list and delete stale git branches.", tags: ["Node.js","CLI","npm"], live: "https://xevrion.github.io/stale-branches/", repo: "https://npmjs.com/package/stale-branches" },
 ];
 
 const POSTS = [
-  { title: "How I Got Selected in GSoC 2026", date: "Jun 23, 2026" },
-  { title: "I Rewrote My Entire Portfolio in Next.js (And Almost Lost My Mind Over One Date)", date: "Jun 11, 2026" },
-  { title: "Browsers Stopped Opening After a New Router", date: "May 9, 2026" },
+ // { title: "How I Got Selected in GSoC 2026", date: "Jun 23, 2026" },
+ // { title: "I Rewrote My Entire Portfolio in Next.js (And Almost Lost My Mind Over One Date)", date: "Jun 11, 2026" },
+ // { title: "Browsers Stopped Opening After a New Router", date: "May 9, 2026" },
 ];
 
 const GUESTBOOK = [
@@ -76,12 +74,12 @@ const GUESTBOOK = [
   { name: "Arman", msg: "One of the cleanest portfolios I've come across. I love the minimalism it carries. Keep up the great work!" },
   { name: "Chinmay Shet", msg: "Great work brother!" },
   { name: "Parthil Kukadiya", msg: "Wow, crazy idea bro" },
-  { name: "Arti", msg: "heloo! the web is so clean and crisp i love it <3 great work, yash!" },
+  { name: "Arti", msg: "heloo! the web is so clean and crisp i love it <3 great work, nitansh!" },
   { name: "Chintan Vaghamshi", msg: "Yo" },
   { name: "SreeCharan Desu", msg: "minimalistic" },
   { name: "Haruki", msg: "Waooo!!! I really really like this website, so clean!!! Really liking this cursor glow." },
   { name: "Pushkal Keshri", msg: "Clean and precise web, on a genuine note loving it!" },
-  { name: "Bhumi Sharma", msg: "this website is too good and well managed well done yash!" },
+  { name: "Bhumi Sharma", msg: "this website is too good and well managed well done nitansh!" },
   { name: "Simran Bali", msg: "Yooo, this website is too prettyyy ✨" },
 ];
 
