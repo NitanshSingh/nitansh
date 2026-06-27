@@ -114,27 +114,32 @@ function Index() {
 
       <main className="mx-auto max-w-5xl px-5 sm:px-8">
         {/* Hero banner */}
-        <section className="relative -mt-2 overflow-hidden rounded-b-3xl border-x border-b border-border">
-          <img
-            src={banner}
-            alt=""
-            width={1920}
-            height={640}
-            className="h-[260px] w-full object-cover sm:h-[360px] md:h-[420px]"
-          />
-          <ForestCursor />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background" />
+        <section className="relative -mt-2 overflow-hidden border-x-2 border-b-2 border-[#1a1208]">
+          <div className="relative h-[260px] w-full overflow-hidden sm:h-[360px] md:h-[420px]">
+            <img
+              src={banner}
+              alt=""
+              width={1920}
+              height={640}
+              className="hero-banner-img absolute inset-0 h-full w-full object-cover"
+            />
+            <ForestCursor />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background" />
+          </div>
+          <div className="grass-strip" />
         </section>
 
 
         <Divider />
 
+
         {/* Profile */}
         <section className="grid grid-cols-1 gap-8 py-10 md:grid-cols-[1fr_auto] md:items-start">
           <div>
-            <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h1 className="font-display text-2xl leading-tight tracking-tight pixel-text-shadow sm:text-3xl">
               Nitansh Singh
             </h1>
+
             <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
               <span>Full Stack Developer</span>
               <span className="chip">
@@ -311,7 +316,7 @@ function Index() {
           </div>
 
           <figure className="mt-10 rounded-2xl border border-border bg-surface/40 p-6 text-center">
-            <blockquote className="font-display text-lg italic text-foreground/90 sm:text-xl">
+            <blockquote className="font-pixel text-2xl leading-snug text-foreground/90 sm:text-3xl">
               "I fear not the man who has practiced 10,000 kicks once, but the man who has practiced one kick 10,000 times."
             </blockquote>
             <figcaption className="mt-2 text-xs text-muted-foreground">— Bruce Lee</figcaption>
@@ -323,9 +328,10 @@ function Index() {
         {/* Contact */}
         <section id="contact" className="py-10">
           <span className="section-label">Contact</span>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-3 font-display text-xl leading-tight tracking-tight pixel-text-shadow sm:text-2xl">
             Got something worth building?
           </h2>
+
           <p className="mt-3 max-w-xl text-muted-foreground">
             Always open for collaborations, new ideas, or just a friendly chat.
           </p>
@@ -374,7 +380,7 @@ function Index() {
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Code2 className="h-3.5 w-3.5" /> Today's Coding
               </div>
-              <div className="mt-4 font-display text-4xl font-semibold tracking-tight">33<span className="ml-1 text-base font-normal text-muted-foreground">mins</span></div>
+              <div className="mt-4 font-display text-2xl tracking-tight pixel-text-shadow">33<span className="ml-2 text-base font-normal text-muted-foreground">mins</span></div>
               <div className="mt-6 text-xs text-muted-foreground">Languages this week</div>
               <ul className="mt-3 space-y-2">
                 {LANGS_WEEK.map(l => (
