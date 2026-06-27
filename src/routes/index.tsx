@@ -6,6 +6,7 @@ import {
   Music, Code2, GitBranch,
 } from "lucide-react";
 import banner from "@/assets/banner.jpg";
+import { ForestCursor } from "@/components/ForestCursor";
 import profile from "@/assets/profile.jpg";
 
 export const Route = createFileRoute("/")({
@@ -121,8 +122,10 @@ function Index() {
             height={640}
             className="h-[260px] w-full object-cover sm:h-[360px] md:h-[420px]"
           />
+          <ForestCursor />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background" />
         </section>
+
 
         <Divider />
 
