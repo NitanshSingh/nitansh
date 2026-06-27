@@ -36,28 +36,28 @@ const TECH = [
 
 const EXPERIENCE = [
   {
-    title: "Google Summer of Code 2026 — KDE Kdenlive",
-    role: "Open Source Contributor (C++ / Qt)",
-    period: "May 2026 – Present",
-    location: "Remote",
-    initials: "GS",
-    tint: "from-amber-500/30 to-rose-500/20",
+   // title: "Google Summer of Code 2026 — KDE Kdenlive",
+   // role: "Open Source Contributor (C++ / Qt)",
+  //  period: "May 2026 – Present",
+ //   location: "Remote",
+ //   initials: "GS",
+  //  tint: "from-amber-500/30 to-rose-500/20",
   },
   {
-    title: "Open Source",
-    role: "Contributor",
-    period: "2025 – Present",
-    location: "Remote",
-    initials: "OS",
-    tint: "from-sky-500/30 to-indigo-500/20",
+  //  title: "Open Source",
+ //   role: "Contributor",
+ //   period: "2025 – Present",
+//    location: "Remote",
+//    initials: "OS",
+//    tint: "from-sky-500/30 to-indigo-500/20",
   },
 ];
 
 const PROJECTS = [
-  { name: "DaemonDoc", desc: "Your README, on Autopilot.", tags: ["Next.js","TypeScript","AI","GitHub API"], live: "https://daemondoc.online/", repo: "https://github.com/xevrion/daemondoc" },
-  { name: "Contributing to Kdenlive", desc: "Contributing to Kdenlive, an open-source video editor.", tags: ["C++","Qt","Open Source"], live: "https://kdenlive.org/", repo: "https://kdenlive.org/" },
-  { name: "Cookmarked", desc: "A recipe manager that helps you save, organize, and discover recipes from around the web, all in one place.", tags: ["Next.js","TypeScript","Postgres"], live: "https://cookmarked.xevrion.dev/", repo: "https://github.com/xevrion/cookmarked" },
-  { name: "Claude Lag Fixer", desc: "A Chrome extension that fixes the typing lag and slowness you get in long Claude.ai conversations.", tags: ["Chrome Extension","JavaScript"], repo: "https://github.com/xevrion/claude-lag-fixer" },
+ // { name: "DaemonDoc", desc: "Your README, on Autopilot.", tags: ["Next.js","TypeScript","AI","GitHub API"], live: "https://daemondoc.online/", repo: "https://github.com/xevrion/daemondoc" },
+//  { name: "Contributing to Kdenlive", desc: "Contributing to Kdenlive, an open-source video editor.", tags: ["C++","Qt","Open Source"], live: "https://kdenlive.org/", repo: "https://kdenlive.org/" },
+//  { name: "Cookmarked", desc: "A recipe manager that helps you save, organize, and discover recipes from around the web, all in one place.", tags: ["Next.js","TypeScript","Postgres"], live: "https://cookmarked.xevrion.dev/", repo: "https://github.com/xevrion/cookmarked" },
+//  { name: "Claude Lag Fixer", desc: "A Chrome extension that fixes the typing lag and slowness you get in long Claude.ai conversations.", tags: ["Chrome Extension","JavaScript"], repo: "https://github.com/xevrion/claude-lag-fixer" },
  // { name: "Peek-a-Repo", desc: "A Chrome extension that lets you peek into your GitHub repositories without clicking.", tags: ["Chrome Extension","JavaScript","GitHub API"], live: "https://chromewebstore.google.com/detail/aanpngikpldepannbdkglfohenbkhomp", repo: "https://github.com/xevrion/peek-a-repo" },
  // { name: "Stale Branches", desc: "Interactive CLI to list and delete stale git branches.", tags: ["Node.js","CLI","npm"], live: "https://xevrion.github.io/stale-branches/", repo: "https://npmjs.com/package/stale-branches" },
 ];
