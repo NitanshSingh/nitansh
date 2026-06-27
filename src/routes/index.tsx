@@ -11,7 +11,7 @@ import profile from "@/assets/profile.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Yash Bavadiya — Full Stack Developer" },
+      { title: "Nitansh Singh — Full Stack Developer" },
       { name: "description", content: "CS student at SOON!. I build things for the web, tinker with systems, and occasionally touch grass." },
     ],
   }),
@@ -130,7 +130,7 @@ function Index() {
         <section className="grid grid-cols-1 gap-8 py-10 md:grid-cols-[1fr_auto] md:items-start">
           <div>
             <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">
-              Yash Bavadiya
+              Nitansh Singh
             </h1>
             <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
               <span>Full Stack Developer</span>
@@ -139,7 +139,7 @@ function Index() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--online)] opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--online)]" />
                 </span>
-                <MapPin className="h-3 w-3" /> Surat, India
+                <MapPin className="h-3 w-3" /> Lucknow, India
               </span>
               <span className="text-xs">{time} · +10h from you</span>
             </div>
@@ -159,11 +159,11 @@ function Index() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              <SocialChip icon={<Github className="h-4 w-4" />} label="GitHub" href="https://github.com/xevrion" />
-              <SocialChip icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" href="https://linkedin.com/in/yash-bavadiya" />
-              <SocialChip icon={<Twitter className="h-4 w-4" />} label="Twitter" href="https://x.com/xevrion_the1" />
+              <SocialChip icon={<Github className="h-4 w-4" />} label="GitHub" href="https://github.com/nitansh" />
+              <SocialChip icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" href="https://linkedin.com/in/nitansh-singh" />
+              <SocialChip icon={<Twitter className="h-4 w-4" />} label="Twitter" href="https://x.com/nitansh" />
               <SocialChip icon={<MessageCircle className="h-4 w-4" />} label="Discord" href="#" />
-              <SocialChip icon={<Heart className="h-4 w-4" />} label="Sponsor" href="https://github.com/sponsors/xevrion" />
+              <SocialChip icon={<Heart className="h-4 w-4" />} label="Sponsor" href="https://github.com/sponsors/nitansh" />
             </div>
           </div>
 
@@ -171,7 +171,7 @@ function Index() {
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-transparent blur-2xl" />
             <img
               src={profile}
-              alt="Yash Bavadiya"
+              alt="Nitansh Singh"
               width={220}
               height={220}
               loading="lazy"
@@ -186,7 +186,7 @@ function Index() {
         <section id="about" className="py-10">
           <span className="section-label">About</span>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-foreground/85">
-            Hi! I'm Yash Bavadiya, a Computer Science student from IIT Jodhpur with a knack for programming, design, and exploring new technologies. I love building creative projects that blend functionality and aesthetics — like web apps, AI tools, and interactive websites. Outside of coding, I enjoy music, playing the piano and ukulele, and constantly learning new things. My goal is to combine technology and creativity to make meaningful, polished digital experiences.
+            Hi! I'm
           </p>
         </section>
 
@@ -327,10 +327,10 @@ function Index() {
             Always open for collaborations, new ideas, or just a friendly chat.
           </p>
           <div className="mt-6 grid gap-2 sm:grid-cols-2">
-            <ContactRow icon={<Mail className="h-4 w-4" />} label="me@xevrion.dev" href="mailto:me@xevrion.dev" />
-            <ContactRow icon={<Github className="h-4 w-4" />} label="github.com/xevrion" href="https://github.com/xevrion" />
-            <ContactRow icon={<Linkedin className="h-4 w-4" />} label="linkedin.com/in/yash-bavadiya" href="https://linkedin.com/in/yash-bavadiya" />
-            <ContactRow icon={<Twitter className="h-4 w-4" />} label="twitter.com/xevrion" href="https://x.com/xevrion_the1" />
+            <ContactRow icon={<Mail className="h-4 w-4" />} label="me@nitansh.dev" href="mailto:me@nitansh.dev" />
+            <ContactRow icon={<Github className="h-4 w-4" />} label="github.com/nitansh" href="https://github.com/nitansh" />
+            <ContactRow icon={<Linkedin className="h-4 w-4" />} label="linkedin.com/in/nitansh-singh" href="https://linkedin.com/in/nitansh-singh" />
+            <ContactRow icon={<Twitter className="h-4 w-4" />} label="twitter.com/nitansh" href="https://x.com/nitansh" />
           </div>
         </section>
 
@@ -409,7 +409,7 @@ function Index() {
         </section>
 
         <footer className="border-t border-border py-10 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Yash Bavadiya. Built with care.
+          © {new Date().getFullYear()} Nitansh Singh. Built with care.
         </footer>
       </main>
 
@@ -426,7 +426,7 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-lg">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#" className="font-mono text-sm font-semibold text-primary">xevrion</a>
+        <a href="#" className="font-mono text-sm font-semibold text-primary">nitansh</a>
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map(n => (
             <a key={n.label} href={n.href} className="rounded-md px-3 py-1.5 text-sm text-muted-foreground transition hover:bg-surface hover:text-foreground">
