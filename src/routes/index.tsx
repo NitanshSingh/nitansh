@@ -6,9 +6,9 @@ import {
   ExternalLink, ArrowUpRight, Command, Sun, Eye, MessageCircle,
   Music, Code2, GitBranch,
 } from "lucide-react";
-import cinematicVideo from "@/assets/cinematic.mp4";
-import eyeComfortVideo from "@/assets/eyecomfort.mp4";
-import normalVideo from "@/assets/video.mp4";
+import cinematicVideo from "@/assets/https://player.cloudinary.com/embed/?cloud_name=dywfq9fy6&public_id=13338251_2088_720_60fps_g0yt9z";
+import eyeComfortVideo from "@/assets/https://player.cloudinary.com/embed/?cloud_name=dywfq9fy6&public_id=14735851_3840_2160_24fps_aljnsm";
+import normalVideo from "@/assets/https://player.cloudinary.com/embed/?cloud_name=dywfq9fy6&public_id=13489721_3840_2160_30fps_pak675";
 import profile from "@/assets/profile.jpg";
 
 export const Route = createFileRoute("/")({
