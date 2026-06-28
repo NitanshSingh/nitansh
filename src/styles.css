@@ -412,7 +412,4 @@ html[data-theme="eye"] .hover-glow:hover {
   background: linear-gradient(180deg, rgba(5, 7, 18, 0.05), rgba(4, 6, 18, 0.75));
   pointer-events: none;
 }
-@keyframes loading {
-  from { width: 0%; }
-  to { width: 100%; }
-}
+
