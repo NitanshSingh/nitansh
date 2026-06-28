@@ -111,7 +111,12 @@ function Index() {
   const [loading, setLoading] = useState(true);
 
 useEffect(() => {
-  const timer = setTimeout(() => setLoading(false), 6000);
+  const video = document.createElement('video');
+  video.src = THEME_VIDEO_SOURCES["default"];
+  video.oncanplaythrough = () => setLoading(false);
+  video.onerror = () => setLoading(false); // error pe bhi loading hatao
+  // fallback - 10 sec baad forcefully hatao
+  const timer = setTimeout(() => setLoading(false), 10000);
   return () => clearTimeout(timer);
 }, []);
 
