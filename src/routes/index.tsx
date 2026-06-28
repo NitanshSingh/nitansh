@@ -108,7 +108,13 @@ function Index() {
   const [transitionTheme, setTransitionTheme] = useState<ThemeMode>("default");
   const [transitionOrigin, setTransitionOrigin] = useState<{ x: number; y: number } | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  
+  const [loading, setLoading] = useState(false);
+
+useEffect(() => {
+  setLoading(true);
+  const timer = setTimeout(() => setLoading(false), 12000);
+  return () => clearTimeout(timer);
+}, []);
   useEffect(() => {
     const update = () => {
       const fmt = new Intl.DateTimeFormat("en-US", {
@@ -148,6 +154,20 @@ function Index() {
       ? "linear-gradient(135deg, #fff8ef 0%, #ffe4b3 100%)"
       : "linear-gradient(135deg, #030712 0%, #0f172a 100%)";
 
+  if (loading) {
+    return (
+      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#030712]">
+        <div className="font-mono text-3xl font-bold text-primary tracking-widest animate-pulse">
+          nitansh
+        </div>
+        <div className="mt-6 h-[2px] w-48 overflow-hidden rounded-full" style={{background: "rgba(255,255,255,0.1)"}}>
+          <div className="h-full bg-primary rounded-full" style={{animation: "loading 12s ease-in-out forwards"}} />
+        </div>
+        <p className="mt-4 text-xs tracking-widest uppercase" style={{color: "rgba(255,255,255,0.4)"}}>Loading</p>
+      </div>
+    );
+  }
+  
   return (
     <div className="relative min-h-screen text-foreground">
       <div
