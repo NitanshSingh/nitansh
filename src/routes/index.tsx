@@ -1,4 +1,3 @@
-import CatLoader from "@/components/CatLoader";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import  LocationBadge from  "@/components/LocationBadge";
@@ -104,8 +103,6 @@ const THEME_VIDEO_SOURCES: Record<ThemeMode, string> = {
 };
 
 function Index() {
-  const [loading, setLoading] = useState(false);
-  useEffect(() => { setLoading(true); }, []);
   const [time, setTime] = useState("");
   const [theme, setTheme] = useState<ThemeMode>("default");
   const [transitionTheme, setTransitionTheme] = useState<ThemeMode>("default");
@@ -144,8 +141,7 @@ useEffect(() => {
   }, [isTransitioning]);
 
   const handleThemeChange = (nextTheme: ThemeMode, origin: { x: number; y: number }) => {
-    if (nextTheme === theme) 
-    if (loading) return <CatLoader onDone={() => setLoading(false)} />;
+    if (nextTheme === theme)
     return;
     setTheme(nextTheme);
     setTransitionTheme(nextTheme);
