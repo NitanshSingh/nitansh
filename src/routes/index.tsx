@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Nitansh Singh — Full Stack Developer" },
-      { name: "description", content: "CS student at SOON!. I build things for the web, tinker with systems, and occasionally touch grass." },
+      { name: "description", content: " SOON! " },
     ],
   }),
   component: Index,
@@ -32,13 +32,13 @@ const NAV = [
 
 const TECH = [
   "C","C++","Python","JavaScript","TypeScript","HTML","CSS","React","Next.js",
-  "Tailwind","Node.js","PyTorch","NumPy","Pandas","Git","Vercel"];
+  "Node.js","Git","Vercel"];
 
 const EXPERIENCE = [
   {
-   // title: "Google Summer of Code 2026 — KDE Kdenlive",
-   // role: "Open Source Contributor (C++ / Qt)",
-  //  period: "May 2026 – Present",
+   // title: "PENDING",
+   // role: " Open Source Contributor ",
+  //  period: "June 2026 – Present",
  //   location: "Remote",
  //   initials: "GS",
   //  tint: "from-amber-500/30 to-rose-500/20",
@@ -46,7 +46,7 @@ const EXPERIENCE = [
   {
   //  title: "Open Source",
  //   role: "Contributor",
- //   period: "2025 – Present",
+ //   period: "2026 – Present",
 //    location: "Remote",
 //    initials: "OS",
 //    tint: "from-sky-500/30 to-indigo-500/20",
@@ -55,9 +55,9 @@ const EXPERIENCE = [
 
 const PROJECTS = [
  // { name: "DaemonDoc", desc: "Your README, on Autopilot.", tags: ["Next.js","TypeScript","AI","GitHub API"], live: "https://daemondoc.online/", repo: "https://github.com/xevrion/daemondoc" },
-//  { name: "Contributing to Kdenlive", desc: "Contributing to Kdenlive, an open-source video editor.", tags: ["C++","Qt","Open Source"], live: "https://kdenlive.org/", repo: "https://kdenlive.org/" },
-//  { name: "Cookmarked", desc: "A recipe manager that helps you save, organize, and discover recipes from around the web, all in one place.", tags: ["Next.js","TypeScript","Postgres"], live: "https://cookmarked.xevrion.dev/", repo: "https://github.com/xevrion/cookmarked" },
-//  { name: "Claude Lag Fixer", desc: "A Chrome extension that fixes the typing lag and slowness you get in long Claude.ai conversations.", tags: ["Chrome Extension","JavaScript"], repo: "https://github.com/xevrion/claude-lag-fixer" },
+ //  { name: "Contributing to Kdenlive", desc: "Contributing to Kdenlive, an open-source video editor.", tags: ["C++","Qt","Open Source"], live: "https://kdenlive.org/", repo: "https://kdenlive.org/" },
+ //  { name: "Cookmarked", desc: "A recipe manager that helps you save, organize, and discover recipes from around the web, all in one place.", tags: ["Next.js","TypeScript","Postgres"], live: "https://cookmarked.xevrion.dev/", repo: "https://github.com/xevrion/cookmarked" },
+ //  { name: "Claude Lag Fixer", desc: "A Chrome extension that fixes the typing lag and slowness you get in long Claude.ai conversations.", tags: ["Chrome Extension","JavaScript"], repo: "https://github.com/xevrion/claude-lag-fixer" },
  // { name: "Peek-a-Repo", desc: "A Chrome extension that lets you peek into your GitHub repositories without clicking.", tags: ["Chrome Extension","JavaScript","GitHub API"], live: "https://chromewebstore.google.com/detail/aanpngikpldepannbdkglfohenbkhomp", repo: "https://github.com/xevrion/peek-a-repo" },
  // { name: "Stale Branches", desc: "Interactive CLI to list and delete stale git branches.", tags: ["Node.js","CLI","npm"], live: "https://xevrion.github.io/stale-branches/", repo: "https://npmjs.com/package/stale-branches" },
 ];
@@ -84,14 +84,14 @@ const GUESTBOOK = [
 ];
 
 const LANGS_WEEK = [
-  { name: "C++", time: "13h 25m", pct: 42 },
-  { name: "TypeScript", time: "9h 36m", pct: 30 },
-  { name: "Markdown", time: "4h 38m", pct: 14 },
-  { name: "CMake", time: "1h 43m", pct: 5 },
-  { name: "JavaScript", time: "1h 1m", pct: 3 },
-  { name: "Assembly", time: "1h 1m", pct: 3 },
-  { name: "JSON", time: "57m", pct: 2 },
-  { name: "TeX", time: "35m", pct: 1 },
+  { name: "C++", time: "00h", pct: 42 },
+  { name: "TypeScript", time: "00h", pct: 30 },
+  //{ name: "Markdown", time: "00h", pct: 14 },
+  //{ name: "CMake", time: "00h", pct: 5 },
+  { name: "JavaScript", time: "00h", pct: 3 },
+  //{ name: "Assembly", time: "00h", pct: 3 },
+  { name: "JSON", time: "00h", pct: 2 },
+ // { name: "TeX", time: "00h", pct: 1 },
 ];
 
 type ThemeMode = "default" | "bright" | "eye";
