@@ -108,6 +108,26 @@ function Index() {
   const [transitionTheme, setTransitionTheme] = useState<ThemeMode>("default");
   const [transitionOrigin, setTransitionOrigin] = useState<{ x: number; y: number } | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  const timer = setTimeout(() => setLoading(false), 6000);
+  return () => clearTimeout(timer);
+}, []);
+
+if (loading) {
+  return (
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#030712]">
+      <div className="font-mono text-2xl font-bold text-primary tracking-widest animate-pulse">
+        nitansh
+      </div>
+      <div className="mt-6 h-[2px] w-48 bg-surface-2 overflow-hidden rounded-full">
+        <div className="h-full bg-primary rounded-full animate-[loading_6s_ease-in-out_forwards]" />
+      </div>
+      <p className="mt-4 text-xs text-muted-foreground tracking-widest uppercase">Loading</p>
+    </div>
+  );
+}
   useEffect(() => {
     const update = () => {
       const fmt = new Intl.DateTimeFormat("en-US", {
