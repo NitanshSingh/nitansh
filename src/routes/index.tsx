@@ -6,9 +6,9 @@ import {
   ExternalLink, ArrowUpRight, Command, Sun, Eye, MessageCircle,
   Music, Code2, GitBranch,
 } from "lucide-react";
-import cinematicVideo from "@/assets/video.mp4";
+import cinematicVideo from "@/assets/cinematic.mp4";
 import eyeComfortVideo from "@/assets/eyecomfort.mp4";
-import normalVideo from "@/assets/cinematic.mp4";
+import normalVideo from "@/assets/video.mp4";
 import profile from "@/assets/profile.jpg";
 
 export const Route = createFileRoute("/")({
@@ -484,7 +484,7 @@ function Header({ theme, onThemeChange }: { theme: ThemeMode;onThemeChange: (nex
   return (
     <header className="sticky top-0 z-40 backdrop-blur-lg">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#" className="font-mono text-sm font-semibold text-primary">Ronix</a>
+        <a href="#" className="font-mono text-sm font-semibold text-primary">WELCOME🔀</a>
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map(n => (
             <a key={n.label} href={n.href} className="interactive-card rounded-md px-3 py-1.5 text-sm text-muted-foreground transition hover:bg-surface hover:text-foreground hover-glow">
